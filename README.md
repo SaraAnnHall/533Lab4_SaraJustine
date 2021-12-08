@@ -1,3 +1,5 @@
+[![Build Status](https://app.travis-ci.com/SaraAnnHall/533Lab4_SaraJustine.svg?token=fCRD5ox8wxGuFNwfs8Ju&branch=main)](https://app.travis-ci.com/SaraAnnHall/533Lab4_SaraJustine)
+
 # Package (probability) 
 Contains functionality relating to the gamma, exponential, and poisson distributions. This includes things like visualization, probability density functions, cumulative distribution functions, and parameter estimation via maximum likelihood. This functionality is split up into two subpackages - distributions and estimation. 
 ## Subpackage 1 (distributions)
