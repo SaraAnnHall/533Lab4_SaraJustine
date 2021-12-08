@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 setup(
     name='probabilityestimation',
-    version='0.1',
+    version='0.2',
     packages=find_packages(exclude=['tests*']),
     license='MIT',
     description='A python package for computing information about Poisson, Gamma, and Exponential distributions.',
