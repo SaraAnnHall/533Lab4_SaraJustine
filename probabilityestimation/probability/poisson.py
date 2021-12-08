@@ -20,7 +20,6 @@ class Poisson:
 
         try:
             if self.lam < 0:
-                print("The rate must be positive")
                 raise ValueError
             
             if self.x >= 0 and type(self.x) == int:
@@ -36,6 +35,9 @@ class Poisson:
                 
         except TypeError:
             print("The arguments passed should be numerical")
+
+        except ValueError:
+            print("The rate must be positive")
         
         
 
