@@ -1,5 +1,9 @@
 import math
 from scipy.stats import poisson
+
+
+
+
 class Poisson:
     """Information pertaining to the poisson distribution.
     """
@@ -15,8 +19,6 @@ class Poisson:
         """
         self.x = x
         self.lam = lam
-
-    
 
         try:
             if self.lam < 0:
@@ -57,7 +59,6 @@ class Poisson:
 
         try:
             if self.lam < 0:
-                print("The rate must be positive")
                 raise ValueError
             if self.x >= 0:
                 cdf = 0
@@ -70,6 +71,9 @@ class Poisson:
         
         except TypeError:
             print("The arguments passed should be numerical")
+        
+        except ValueError:
+            print("The rate and shape parameter must be positive")
        
 
     
@@ -88,7 +92,6 @@ class Poisson:
         
         try:
             if self.lam < 0:
-                print("The rate must be positive")
                 raise ValueError
             if 0 <= self.p <= 1:
                 quantile = poisson.ppf(self.p, self.lam)
@@ -97,3 +100,6 @@ class Poisson:
                 print("The probability must be between 0 and 1")
         except TypeError:
             print("The arguments passed should be numerical")
+        
+        except ValueError:
+            print("The rate and shape parameter must be positive")
