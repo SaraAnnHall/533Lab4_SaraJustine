@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 import numpy
-from distributions.estimation import plot 
+from probabilityestimation.estimation import plot 
 
 class TestPlot(unittest.TestCase):
     @classmethod

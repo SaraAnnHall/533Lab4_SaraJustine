@@ -1,6 +1,6 @@
 import unittest
 import pandas as pd
-from distributions.estimation import mle
+from probabilityestimation.estimation import mle
 
 class TestMle(unittest.TestCase):
     @classmethod

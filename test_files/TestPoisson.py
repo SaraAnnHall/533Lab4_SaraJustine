@@ -1,6 +1,6 @@
 import unittest
 import math
-from distributions.probability.poisson import Poisson
+from probabilityestimation.probability.poisson import Poisson
 
 class TestPoisson(unittest.TestCase): 
     @classmethod

@@ -1,6 +1,6 @@
 import unittest
 import pandas as pd
-from distributions.estimation import summary
+from probabilityestimation.estimation import summary
 
 class TestSummary(unittest.TestCase):
     @classmethod

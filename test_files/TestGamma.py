@@ -1,6 +1,6 @@
 import unittest
 import math
-from distributions.probability.gamma import Gamma
+from probabilityestimation.probability.gamma import Gamma
 
 class TestGamma(unittest.TestCase): 
     @classmethod
