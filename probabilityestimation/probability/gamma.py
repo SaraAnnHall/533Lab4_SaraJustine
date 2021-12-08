@@ -22,6 +22,7 @@ class Gamma:
 
         try:
             if self.lam < 0 or self.alpha < 0:
+                print("The rate and shape parameter must be positive")
                 raise ValueError
             if self.x >= 0:
                 pdf = ((self.x**(self.alpha - 1))*math.exp(-self.lam*self.x)*(self.lam**(self.alpha)))/math.gamma(self.alpha)
@@ -30,9 +31,7 @@ class Gamma:
                 return 0
         except TypeError:
             print("The arguments passed should be numerical")
-        
-        except ValueError:
-            print("The rate and shape parameter must be positive")
+
     
     def cdf(self, x, alpha, lam):
         """Cumulative distribution function for the gamma distribution. 
@@ -51,6 +50,7 @@ class Gamma:
 
         try:
             if self.lam < 0 or self.alpha < 0:
+                print("The rate and shape parameter must be positive")
                 raise ValueError
             if self.x > 0:
                 cdf = gamma.cdf(self.x, self.alpha, scale = 1/self.lam)
@@ -60,8 +60,6 @@ class Gamma:
         except TypeError:
             print("The arguments passed should be numerical")
         
-        except ValueError:
-            print("The rate and shape parameter must be positive")
 
     
     def quantile(self, p, alpha, lam):
@@ -82,6 +80,7 @@ class Gamma:
         
         try:
             if self.lam < 0 or self.alpha < 0:
+                print("The rate and shape parameter must be positive")
                 raise ValueError
 
             if 0 <= self.p <= 1:
@@ -92,6 +91,3 @@ class Gamma:
                 raise ValueError
         except TypeError:
             print("The arguments passed should be numerical")
-        
-        except ValueError:
-            print("The rate and shape parameter must be positive")
