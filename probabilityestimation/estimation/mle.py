@@ -3,6 +3,9 @@ import numpy as np
 import statistics
 from scipy.stats import gamma
 
+class InvalidDataError(Exception):
+    pass
+
 def readData(file):
     """ reads a comma-separated values (csv) file with only one column where all values are non-negative
         
@@ -13,7 +16,11 @@ def readData(file):
         list: List containing the values from the comma-sperated values (csv) file
     """
     import pandas as pd
-    data = pd.read_csv(file)
+    try:
+        data = pd.read_csv(file)
+    except:
+        raise InvalidDataError
+
     if len(data.columns) != 1:
         raise ValueError("Data file must only have one column of data.")
     else:
