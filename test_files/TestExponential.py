@@ -1,6 +1,6 @@
 import unittest
 import math
-from distributions.probability.exponential import Exponential
+from probabilityestimation.probability.exponential import Exponential
 
 class TestExponential(unittest.TestCase): 
     @classmethod

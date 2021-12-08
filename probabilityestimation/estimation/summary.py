@@ -1,6 +1,8 @@
 import statistics
 import pandas as pd
 
+class InvalidData(Exception):
+    pass
 
 def summary(data):
     """Returns the minumum, maximum, mean, and variance of the provided data. 
@@ -11,8 +13,11 @@ def summary(data):
     Returns:
         dictionary with minimum value, maximum value, variance, and mean. 
     """
-    variance = statistics.variance(data)
-    mean = statistics.mean(data)
+    try:
+        variance = statistics.variance(data)
+        mean = statistics.mean(data)
+    except:
+        raise InvalidData("Your data needs to be a list containing only numerical values.")
 
     return {"Min": min(data), "Max":max(data), "Variance":variance, "Mean": mean}
 

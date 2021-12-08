@@ -31,6 +31,7 @@ class Gamma:
                 return 0
         except TypeError:
             print("The arguments passed should be numerical")
+
     
     def cdf(self, x, alpha, lam):
         """Cumulative distribution function for the gamma distribution. 
@@ -46,11 +47,10 @@ class Gamma:
         self.lam = lam
         self.alpha = alpha
         
-        
 
         try:
             if self.lam < 0 or self.alpha < 0:
-                print("The rate and the shape parameter must be positive")
+                print("The rate and shape parameter must be positive")
                 raise ValueError
             if self.x > 0:
                 cdf = gamma.cdf(self.x, self.alpha, scale = 1/self.lam)
@@ -59,6 +59,7 @@ class Gamma:
                 return 0
         except TypeError:
             print("The arguments passed should be numerical")
+        
 
     
     def quantile(self, p, alpha, lam):

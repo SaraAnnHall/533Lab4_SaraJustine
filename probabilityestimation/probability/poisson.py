@@ -1,5 +1,6 @@
 import math
 from scipy.stats import poisson
+
 class Poisson:
     """Information pertaining to the poisson distribution.
     """
@@ -15,8 +16,6 @@ class Poisson:
         """
         self.x = x
         self.lam = lam
-
-    
 
         try:
             if self.lam < 0:
@@ -36,6 +35,7 @@ class Poisson:
                 
         except TypeError:
             print("The arguments passed should be numerical")
+
         
         
 
@@ -68,6 +68,8 @@ class Poisson:
         
         except TypeError:
             print("The arguments passed should be numerical")
+        
+
        
 
     
@@ -95,3 +97,4 @@ class Poisson:
                 print("The probability must be between 0 and 1")
         except TypeError:
             print("The arguments passed should be numerical")
+        
