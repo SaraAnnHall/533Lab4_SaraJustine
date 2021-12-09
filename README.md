@@ -1,6 +1,7 @@
 [![Build Status](https://app.travis-ci.com/SaraAnnHall/533Lab4_SaraJustine.svg?token=fCRD5ox8wxGuFNwfs8Ju&branch=main)](https://app.travis-ci.com/SaraAnnHall/533Lab4_SaraJustine)
 
 Link to our published package : [probabilityestimation package](https://pypi.org/project/probabilityestimation/#files)
+
 Link to our video explaining our package: [Explanation video](https://www.youtube.com/watch?v=1lO4IPPRAhQ)
 
 # Package (probabilityestimation) 
